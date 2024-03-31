@@ -16,7 +16,7 @@ export default {
     },
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
+        border: 'hsl(var(--border) / var(--border-opacity))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
@@ -24,10 +24,23 @@ export default {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          brand: 'hsl(var(--primary-brand))',
+          purple: 'hsl(var(--primary-purple))',
+          blue: 'hsl(var(--primary-blue))',
+          light: 'hsl(var(--primary-light))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
+          indigo: 'hsl(var(--secondary-indigo))',
+          purple: 'hsl(var(--secondary-purple))',
+          cyan: 'hsl(var(--secondary-cyan))',
+          blue: 'hsl(var(--secondary-blue))',
+          green: 'hsl(var(--secondary-green))',
+          mint: 'hsl(var(--secondary-mint))',
+          yellow: 'hsl(var(--secondary-yellow))',
+          orange: 'hsl(var(--secondary-orange))',
+          red: 'hsl(var(--secondary-red))',
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
@@ -49,12 +62,14 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        black: 'hsl(var(--black))',
+        white: 'hsl(var(--white))',
       },
       borderRadius: {
         xl: 'calc(var(--radius) + 4px)',
         lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        md: 'calc(var(--radius) - 4px)',
+        sm: 'calc(var(--radius) - 8px)',
       },
       keyframes: {
         'accordion-down': {
@@ -79,6 +94,10 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'collapsible-down': 'collapsible-down 0.2s ease-in-out',
         'collapsible-up': 'collapsible-up 0.2s ease-in-out',
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
     },
   },
